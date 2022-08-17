@@ -5,6 +5,10 @@ by external authentication with ``nginx``.
 Authentication is based on jsonwebtoken, using an RSA key pair,
 but using a secret string would be the same.
 
+Use cases scenario are available under ``auth-server/requests``.
+Both nginx server and the auth-server must be running.
+Files can be use with WebStorm built-in http client.
+
 ## Architecture
 
 The ``auth-server`` is a basic express server capable of generating jwt token and verifying them.
