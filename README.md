@@ -60,5 +60,9 @@ Depending on the production environment, one would certainly have to change the 
 * [nginx - Docker image](https://hub.docker.com/_/nginx/)
 * [Authenticating API Clients with JWT and NGINX Plus](https://www.nginx.com/blog/authenticating-api-clients-jwt-nginx-plus/)
 
+Javascript in nginx:
 * [Enabling NGINX JavaScript for NGINX and NGINX Plus](https://www.nginx.com/blog/harnessing-power-convenience-of-javascript-for-each-request-with-nginx-javascript-module/#njs-enable)
 * [nginx Docs - njs Scripting Language](https://docs.nginx.com/nginx/admin-guide/dynamic-modules/nginscript/)
+
+With nginx Plus:
+* [Authentication and Content-Based Routing with JWTs and NGINX Plus](https://www.nginx.com/blog/authentication-content-based-routing-jwts-nginx-plus/)
