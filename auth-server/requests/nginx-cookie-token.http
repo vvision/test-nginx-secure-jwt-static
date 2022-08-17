@@ -1,0 +1,26 @@
+### Get a token from identity provider in cookie
+GET http://localhost:3000/cookie-token
+Accept: application/json
+
+### Check token validity directly with auth provider (identity provider)
+GET http://localhost:3000/cookie-decode
+
+### Request to nginx static page with token in cookie.
+GET http://localhost:80/cookie-protected/index.html
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+
+### Request to nginx static page with no auth
+# Should get a 401 error.
+// @no-cookie-jar
+GET http://localhost:80/cookie-protected/index.html
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 401, "Response status is not 401");
+    });
+%}

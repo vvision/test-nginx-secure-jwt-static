@@ -1,0 +1,12 @@
+### GET request with a header
+GET http://localhost:3000/cookie-token
+Accept: application/json
+
+{
+  "token": "my-secret-token"
+}
+
+> {% client.global.set("auth_token", response.body.token); %}
+
+### Authorization by token, part 2. Use token to authorize.
+GET http://localhost:3000/cookie-decode

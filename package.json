@@ -1,0 +1,15 @@
+{
+  "name": "test-nginx-secure-jwt-static",
+  "version": "0.0.1",
+  "description": "Assert protection of static content using an external identity provider.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vvision/test-nginx-secure-jwt-static.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vvision/test-nginx-secure-jwt-static/issues"
+  },
+  "homepage": "https://github.com/vvision/test-nginx-secure-jwt-static#readme"
+}

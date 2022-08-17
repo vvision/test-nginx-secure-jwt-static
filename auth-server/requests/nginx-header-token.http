@@ -1,0 +1,34 @@
+### Get a token from identity provider
+GET http://localhost:3000/token
+Accept: application/json
+
+{
+  "token": "my-secret-token"
+}
+
+> {% client.global.set("auth_token", response.body.token); %}
+
+### Check token validity directly with auth provider (identity provider)
+GET http://localhost:3000/decode
+Authorization: Bearer {{auth_token}}
+
+### Request to nginx static page with token in header.
+### Should get a 200 with index.html from protected page.
+GET http://localhost:80/header-protected/index.html
+Authorization: Bearer {{auth_token}}
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+
+### Request to nginx static page with no auth
+### Should get a 401 error.
+GET http://localhost:80/header-protected/index.html
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 401, "Response status is not 401");
+    });
+%}

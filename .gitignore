@@ -1,0 +1,35 @@
+.env
+*.pem
+*.bak
+*.save
+
+npm-debug.log*
+
+/logs
+dist
+node_modules
+coverage
+test/coverage
+tmp-logs-files
+
+# OS
+.DS_Store
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# NPM private repo
+/.npmrc
