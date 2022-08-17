@@ -1,6 +1,6 @@
 {
   "name": "test-nginx-secure-jwt-static",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Assert protection of static content using an external identity provider.",
   "repository": {
     "type": "git",
